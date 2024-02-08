@@ -14,4 +14,4 @@ jobs:
         echo "Hello World!"
         
     - name: Echo Current Date
-      run: echo date
+      run: "$(date +'%Y-%m-%d')"
