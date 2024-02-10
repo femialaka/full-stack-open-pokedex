@@ -23,6 +23,8 @@ jobs:
       - name: Jest Test
         run: npm run test
       - name: Cypress Test
-        run: |
-          npm run start-prod
-          npm run cypress:open 
+        uses: cypress-io/github-action@v5
+        with:
+          command: npm run start-prod
+          start: npm run cypress:open
+          wait-on: http://localhost:5000
