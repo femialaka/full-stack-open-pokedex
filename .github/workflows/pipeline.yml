@@ -22,9 +22,9 @@ jobs:
         run: npm run build
       - name: Jest Test
         run: npm run test
-      - name: Cypress Test
+      - name: e2e tests
         uses: cypress-io/github-action@v6
         with:
-          command: npm run start-prod
-          start: npm run cypress:open
+          command: npm run cypress:open
+          start: npm run start-prod
           wait-on: http://localhost:5000
