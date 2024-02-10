@@ -22,8 +22,5 @@ jobs:
         run: npm run build
       - name: Jest Test
         run: npm run test
-      - name: e2e tests
+      - name: Cypress run
         uses: cypress-io/github-action@v6
-        with:
-          command: npm run cypress:open
-          start: npm run start-prod
