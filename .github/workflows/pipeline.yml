@@ -20,5 +20,9 @@ jobs:
         run: npm run eslint
       - name: Build project
         run: npm run build
-      - name: Test project
+      - name: Jest Test
         run: npm run test
+      - name: Cypress Test
+        run: |
+          npm run start-prod
+          npm run cypress:open 
