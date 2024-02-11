@@ -32,7 +32,6 @@ jobs:
         run: curl https://api.render.com/deploy/srv-${{ secrets.RENDER_SERVICE_ID }}?key=${{ secrets.RENDER_API_KEY }}
   tag_release:
         needs: [simple_deployment_pipeline]
-        if: ${{ github.ref == 'refs/heads/master' }}
         runs-on: ubuntu-latest
         permissions:
           contents: write
