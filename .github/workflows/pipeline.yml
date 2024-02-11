@@ -26,6 +26,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
+          node-version: '20'
           start: npm run start-prod
       - name: Trigger deployment pipeline
         if: github.event_name == 'push'
