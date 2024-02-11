@@ -24,9 +24,8 @@ jobs:
       - name: Jest Test
         run: npm run test
       - name: Cypress run
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v6
         with:
-          node-version: '20'
           start: npm run start-prod
       - name: Trigger deployment pipeline
         if: github.event_name == 'push'
